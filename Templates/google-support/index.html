@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Help</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'Product Sans';
+            src: url('https://fonts.gstatic.com/s/productsans/v9/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2') format('woff2');
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Product Sans';
+            src: url('https://fonts.gstatic.com/s/productsans/v9/pxiEyp8kv8JHgFVrJJfecnFHGPc.woff2') format('woff2');
+            font-weight: 500;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Product Sans';
+            src: url('https://fonts.gstatic.com/s/productsans/v9/pxiByp8kv8JHgFVrLCz7Z1xlFd2JQEk.woff2') format('woff2');
+            font-weight: 700;
+            font-style: normal;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="left-nav">
+                    <button class="menu-btn" id="menuBtn">
+                        <span class="menu-icon"></span>
+                        <span class="menu-icon"></span>
+                        <span class="menu-icon"></span>
+                    </button>
+                    <span class="logo-text">Google Help</span>
+                </div>
+                <div class="right-nav">
+                    <button class="apps-btn" id="appsBtn">
+                        <div class="apps-grid">
+                            <div class="app-dot"></div>
+                            <div class="app-dot"></div>
+                            <div class="app-dot"></div>
+                            <div class="app-dot"></div>
+                            <div class="app-dot"></div>
+                            <div class="app-dot"></div>
+                            <div class="app-dot"></div>
+                            <div class="app-dot"></div>
+                            <div class="app-dot"></div>
+                        </div>
+                    </button>
+                    <button class="sign-in-btn" id="signInBtn">Sign in</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="google-logo">
+                        <img src="https://ssl.gstatic.com/images/branding/googleg/2x/googleg_standard_color_64dp.png" alt="Google" width="64" height="64">
+                    </div>
+                    <h1>How can we help you?</h1>
+                    <div class="search-container">
+                        <input type="text" placeholder="Describe your issue" class="search-input" id="searchInput">
+                        <button class="search-btn" id="searchBtn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" fill="#9AA0A6"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="hero-illustration">
+                        <div class="people-illustration">
+                            <div class="person person-1"></div>
+                            <div class="person person-2"></div>
+                            <div class="person person-3"></div>
+                            <div class="person person-4"></div>
+                            <div class="person person-5"></div>
+                            <div class="person person-6"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="products-section">
+            <div class="container">
+                <div class="products-grid">
+                    <div class="product-card" data-product="chrome">
+                        <div class="product-icon">
+                            <img src="https://ssl.gstatic.com/images/branding/product/2x/chrome_48dp.png" alt="Chrome" width="48" height="48">
+                        </div>
+                        <span class="product-name">Google Chrome</span>
+                    </div>
+
+                    <div class="product-card" data-product="account">
+                        <div class="product-icon">
+                            <img src="https://lh3.googleusercontent.com/o9U8AvPuX9gkIYtYfNmH-_wBdTfOJ7jb0VwbLWWbERzml7oTPngODhKv2Br7A64=w64" alt="Account" width="48" height="48">
+                        </div>
+                        <span class="product-name">Google Account</span>
+                    </div>
+
+                    <div class="product-card" data-product="youtube">
+                        <div class="product-icon">
+                            <img src="https://ssl.gstatic.com/images/branding/product/2x/youtube_48dp.png" alt="YouTube" width="48" height="48">
+                        </div>
+                        <span class="product-name">YouTube</span>
+                    </div>
+
+                    <div class="product-card" data-product="gmail">
+                        <div class="product-icon">
+                            <img src="https://ssl.gstatic.com/images/branding/product/2x/gmail_48dp.png" alt="Gmail" width="48" height="48">
+                        </div>
+                        <span class="product-name">Gmail</span>
+                    </div>
+
+                    <div class="product-card" data-product="play">
+                        <div class="product-icon">
+                            <img src="https://ssl.gstatic.com/images/branding/product/2x/play_prism_48dp.png" alt="Google Play" width="48" height="48">
+                        </div>
+                        <span class="product-name">Google Play</span>
+                    </div>
+
+                    <div class="product-card" data-product="search">
+                        <div class="product-icon">
+                            <img src="https://ssl.gstatic.com/images/branding/product/2x/googleg_48dp.png" alt="Google Search" width="48" height="48">
+                        </div>
+                        <span class="product-name">Google Search</span>
+                    </div>
+
+                    <div class="product-card" data-product="adsense">
+                        <div class="product-icon">
+                            <img src="https://ssl.gstatic.com/images/branding/product/2x/adsense_48dp.png" alt="Google AdSense" width="48" height="48">
+                        </div>
+                        <span class="product-name">Google AdSense</span>
+                    </div>
+
+                    <div class="product-card" data-product="gemini">
+                        <div class="product-icon">
+                            <img src="https://www.gstatic.com/images/branding/productlogos/gemini_round/v1/web-64dp/logo_gemini_round_color_1x_web_64dp.png" alt="Gemini Apps" width="48" height="48">
+                        </div>
+                        <span class="product-name">Gemini Apps</span>
+                    </div>
+
+                    <div class="product-card" data-product="pixel">
+                        <div class="product-icon">
+                            <img src="https://www.gstatic.com/images/branding/productlogos/google_search_round/v8/web-64dp/logo_google_search_round_color_1x_web_64dp.png" alt="Pixel Phone" width="48" height="48">
+                        </div>
+                        <span class="product-name">Pixel Phone</span>
+                    </div>
+
+                    <div class="product-card" data-product="maps">
+                        <div class="product-icon">
+                            <img src="https://ssl.gstatic.com/images/branding/product/2x/maps_48dp.png" alt="Google Maps" width="48" height="48">
+                        </div>
+                        <span class="product-name">Google Maps</span>
+                    </div>
+
+                    <div class="product-card" data-product="cloud">
+                        <div class="product-icon">
+                            <img src="https://ssl.gstatic.com/images/branding/product/2x/google_cloud_48dp.png" alt="Google Cloud" width="48" height="48">
+                        </div>
+                        <span class="product-name">Google Cloud</span>
+                    </div>
+
+                    <div class="product-card" data-product="ads">
+                        <div class="product-icon">
+                            <img src="https://ssl.gstatic.com/images/branding/product/2x/ads_48dp.png" alt="Google Ads" width="48" height="48">
+                        </div>
+                        <span class="product-name">Google Ads</span>
+                    </div>
+
+                    <div class="product-card" data-product="photos">
+                        <div class="product-icon">
+                            <img src="https://ssl.gstatic.com/images/branding/product/2x/photos_48dp.png" alt="Google Photos" width="48" height="48">
+                        </div>
+                        <span class="product-name">Google Photos</span>
+                    </div>
+
+                    <div class="product-card" data-product="families">
+                        <div class="product-icon">
+                            <img src="https://ssl.gstatic.com/images/branding/product/2x/family_link_48dp.png" alt="Google For Families" width="48" height="48">
+                        </div>
+                        <span class="product-name">Google For Families</span>
+                    </div>
+
+                    <div class="product-card" data-product="fi">
+                        <div class="product-icon">
+                            <img src="https://ssl.gstatic.com/images/branding/product/2x/fi_48dp.png" alt="Google Fi Wireless" width="48" height="48">
+                        </div>
+                        <span class="product-name">Google Fi Wireless</span>
+                    </div>
+
+                    <div class="product-card" data-product="nest">
+                        <div class="product-icon">
+                            <img src="https://www.gstatic.com/images/branding/product/1x/google_home_64dp.png" alt="Google Nest" width="48" height="48">
+                        </div>
+                        <span class="product-name">Google Nest</span>
+                    </div>
+
+                    <div class="product-card" data-product="pay">
+                        <div class="product-icon">
+                            <img src="https://ssl.gstatic.com/images/branding/product/2x/pay_48dp.png" alt="Google Pay" width="48" height="48">
+                        </div>
+                        <span class="product-name">Google Pay</span>
+                    </div>
+
+                    <div class="product-card" data-product="store">
+                        <div class="product-icon">
+                            <img src="https://fonts.gstatic.com/s/i/productlogos/gstore/v5/web-64dp/logo_gstore_color_1x_web_64dp.png" alt="Google Store" width="48" height="48">
+                        </div>
+                        <span class="product-name">Google Store</span>
+                    </div>
+
+                    <div class="product-card" data-product="drive">
+                        <div class="product-icon">
+                            <img src="https://ssl.gstatic.com/images/branding/product/2x/drive_48dp.png" alt="Google Drive" width="48" height="48">
+                        </div>
+                        <span class="product-name">Google Drive</span>
+                    </div>
+
+                    <div class="product-card" data-product="accessibility">
+                        <div class="product-icon">
+                            <img src="https://ssl.gstatic.com/images/branding/product/2x/accessibility_48dp.png" alt="Google Accessibility" width="48" height="48">
+                        </div>
+                        <span class="product-name">Google Accessibility</span>
+                    </div>
+                </div>
+
+                <div class="show-more-container">
+                    <button class="show-more-btn" id="showMoreBtn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M7 10l5 5 5-5z" fill="#5F6368"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="help-sections">
+            <div class="container">
+                <div class="help-grid">
+                    <div class="help-card">
+                        <h3>Your account</h3>
+                        <ul>
+                            <li><a href="#" class="help-link">Can't access your account?</a></li>
+                            <li><a href="#" class="help-link">Recent transactions with Google</a></li>
+                            <li><a href="#" class="help-link">Helpful stuff you can do with Google</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="help-card">
+                        <h3>Help Communities</h3>
+                        <p>Learn more about</p>
+                        <p><a href="#" class="help-link">Google's Product Experts Program</a></p>
+                    </div>
+
+                    <div class="help-card">
+                        <h3>Status dashboard</h3>
+                        <p>If you're having trouble accessing a Google product, there's a chance we're currently experiencing a temporary problem. You can check for outages and downtime on the</p>
+                        <p><a href="#" class="help-link">Google Workspace Status Dashboard</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <span>©2025 Google</span>
+                    <a href="#" class="footer-link">Privacy Policy</a>
+                    <a href="#" class="footer-link">Terms of Service</a>
+                </div>
+                <div class="footer-right">
+                    <div class="language-selector">
+                        <select id="languageSelect">
+                            <option value="en">English</option>
+                            <option value="es">Español</option>
+                            <option value="fr">Français</option>
+                        </select>
+                    </div>
+                    <button class="feedback-btn" id="feedbackBtn">Send feedback about our Help Center</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal" id="errorModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Security Alert Detected</h3>
+                <span class="close" id="closeModal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="error-icon">⚠️</div>
+                <p>Your Google account has detected suspicious activity.</p>
+                <p><strong>Error Code:</strong> <span id="errorCode">GOOG-SEC-0x4A7B</span></p>
+                <p>Please contact Google Support immediately to secure your account.</p>
+                <div class="contact-info">
+                    <p><strong>Support Number:</strong> <span class="phone-number">+1-855-836-1987</span></p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-danger" id="callNowBtn">Call Support Now</button>
+                <button class="btn-secondary" id="ignoreBtn">Ignore Warning</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="chat-widget" id="chatWidget">
+        <div class="chat-header">
+            <span>Google Support Chat</span>
+            <button class="chat-close" id="chatClose">&times;</button>
+        </div>
+        <div class="chat-body" id="chatBody">
+            <div class="chat-message agent">
+                <div class="message-content">
+                    Hello! I'm Alex from Google Support. How can I assist you today?
+                </div>
+                <div class="message-time">Just now</div>
+            </div>
+        </div>
+        <div class="chat-input">
+            <input type="text" placeholder="Type your message..." id="chatInput">
+            <button id="sendChat">Send</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
