@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
         'PAYMENT-ERROR-0x8007000D'
     ];
     
-    // Replace example numbers with your own.
+    // Replace example phone numbers with your own.
     const supportNumbers = [
         '+1-000-000-0000',
         '+1-000-000-0000',
