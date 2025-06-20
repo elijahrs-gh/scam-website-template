@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎉 CONGRATULATIONS! You've Won! 🎉</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="confetti"></div>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-trophy"></i>
+                <span>MEGA LOTTERY</span>
+            </div>
+            <div class="date">June 20, 2025</div>
+        </header>
+
+        <main class="main-content">
+            <div class="winner-announcement">
+                <div class="flash-banner">
+                    <i class="fas fa-star"></i>
+                    <span>OFFICIAL WINNER NOTIFICATION</span>
+                    <i class="fas fa-star"></i>
+                </div>
+                
+                <h1 class="congratulations">🎉 CONGRATULATIONS! 🎉</h1>
+                
+                <div class="winner-box">
+                    <div class="amount">
+                        <span class="currency">$</span>
+                        <span class="number" id="prize-amount">1,000,000</span>
+                    </div>
+                    <div class="winner-text">YOU ARE OUR GRAND PRIZE WINNER!</div>
+                </div>
+
+                <div class="ticket-info">
+                    <div class="ticket-number">
+                        <span class="label">Winning Ticket #:</span>
+                        <span class="value" id="ticket-number">LT-2025-789456123</span>
+                    </div>
+                    <div class="draw-date">
+                        <span class="label">Draw Date:</span>
+                        <span class="value">June 20, 2025</span>
+                    </div>
+                </div>
+
+                <div class="winning-numbers">
+                    <h3>Your Winning Numbers:</h3>
+                    <div class="numbers-container">
+                        <div class="number-ball">07</div>
+                        <div class="number-ball">14</div>
+                        <div class="number-ball">23</div>
+                        <div class="number-ball">31</div>
+                        <div class="number-ball">42</div>
+                        <div class="number-ball special">19</div>
+                    </div>
+                </div>
+
+                <div class="claim-section">
+                    <div class="urgency-notice">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <span>CLAIM DEADLINE: <strong>24 HOURS REMAINING</strong></span>
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    
+                    <div class="countdown" id="countdown">
+                        <div class="time-unit">
+                            <span class="time-value" id="hours">23</span>
+                            <span class="time-label">Hours</span>
+                        </div>
+                        <div class="time-unit">
+                            <span class="time-value" id="minutes">45</span>
+                            <span class="time-label">Minutes</span>
+                        </div>
+                        <div class="time-unit">
+                            <span class="time-value" id="seconds">30</span>
+                            <span class="time-label">Seconds</span>
+                        </div>
+                    </div>
+
+                    <button class="claim-button" id="claim-btn">
+                        <i class="fas fa-gift"></i>
+                        CLAIM YOUR PRIZE NOW
+                    </button>
+                </div>
+
+                <div class="verification-badges">
+                    <div class="badge">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>VERIFIED WINNER</span>
+                    </div>
+                    <div class="badge">
+                        <i class="fas fa-certificate"></i>
+                        <span>OFFICIAL DRAW</span>
+                    </div>
+                    <div class="badge">
+                        <i class="fas fa-lock"></i>
+                        <span>SECURE CLAIM</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 Mega Lottery Corporation. All rights reserved.</p>
+            <p>Lottery License #: ML-2025-CERT-789</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
