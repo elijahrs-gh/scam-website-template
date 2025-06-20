@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steam - Free Game Keys Giveaway</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="steam-header">
+        <div class="header-container">
+            <div class="steam-logo">
+                <i class="fab fa-steam"></i>
+                <span>Steam</span>
+            </div>
+            <nav class="main-nav">
+                <a href="#" class="nav-link">STORE</a>
+                <a href="#" class="nav-link">LIBRARY</a>
+                <a href="#" class="nav-link">COMMUNITY</a>
+                <a href="#" class="nav-link active">GIVEAWAY</a>
+                <a href="#" class="nav-link">SUPPORT</a>
+            </nav>
+            <div class="user-area">
+                <div class="install-steam">
+                    <i class="fas fa-download"></i>
+                    Install Steam
+                </div>
+                <div class="user-info">
+                    <span>Guest</span>
+                    <i class="fas fa-user-circle"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="steam-body">
+        <div class="promo-banner">
+            <div class="banner-content">
+                <h1>SUMMER GIVEAWAY 2025</h1>
+                <p>Claim your FREE Steam game keys now!</p>
+                <div class="banner-stats">
+                    <div class="stat">
+                        <span class="stat-number" id="keys-claimed">45,287</span>
+                        <span class="stat-label">Keys Claimed</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" id="time-left">23:45:30</span>
+                        <span class="stat-label">Time Left</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-container">
+            <div class="giveaway-section">
+                <div class="section-header">
+                    <h2>Available Free Games</h2>
+                    <div class="security-badge">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Steam Verified Giveaway</span>
+                    </div>
+                </div>
+
+                <div class="games-grid">
+                    <div class="game-card" data-game="cyberpunk">
+                        <div class="game-image">
+                            <div class="game-placeholder cyberpunk">
+                                <i class="fas fa-gamepad"></i>
+                            </div>
+                            <div class="game-discount">FREE</div>
+                        </div>
+                        <div class="game-info">
+                            <h3>Cyberpunk 2077</h3>
+                            <div class="game-price">
+                                <span class="original-price">$59.99</span>
+                                <span class="free-price">FREE</span>
+                            </div>
+                            <div class="availability">
+                                <span class="keys-left" id="cyberpunk-keys">247 keys left</span>
+                            </div>
+                            <button class="claim-btn" onclick="claimGame('cyberpunk')">
+                                <i class="fas fa-gift"></i>
+                                CLAIM KEY
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="game-card" data-game="rdr2">
+                        <div class="game-image">
+                            <div class="game-placeholder rdr2">
+                                <i class="fas fa-horse"></i>
+                            </div>
+                            <div class="game-discount">FREE</div>
+                        </div>
+                        <div class="game-info">
+                            <h3>Red Dead Redemption 2</h3>
+                            <div class="game-price">
+                                <span class="original-price">$59.99</span>
+                                <span class="free-price">FREE</span>
+                            </div>
+                            <div class="availability">
+                                <span class="keys-left" id="rdr2-keys">189 keys left</span>
+                            </div>
+                            <button class="claim-btn" onclick="claimGame('rdr2')">
+                                <i class="fas fa-gift"></i>
+                                CLAIM KEY
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="game-card" data-game="gta5">
+                        <div class="game-image">
+                            <div class="game-placeholder gta5">
+                                <i class="fas fa-car"></i>
+                            </div>
+                            <div class="game-discount">FREE</div>
+                        </div>
+                        <div class="game-info">
+                            <h3>Grand Theft Auto V</h3>
+                            <div class="game-price">
+                                <span class="original-price">$29.99</span>
+                                <span class="free-price">FREE</span>
+                            </div>
+                            <div class="availability">
+                                <span class="keys-left" id="gta5-keys">356 keys left</span>
+                            </div>
+                            <button class="claim-btn" onclick="claimGame('gta5')">
+                                <i class="fas fa-gift"></i>
+                                CLAIM KEY
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="game-card" data-game="witcher3">
+                        <div class="game-image">
+                            <div class="game-placeholder witcher3">
+                                <i class="fas fa-sword"></i>
+                            </div>
+                            <div class="game-discount">FREE</div>
+                        </div>
+                        <div class="game-info">
+                            <h3>The Witcher 3: Wild Hunt</h3>
+                            <div class="game-price">
+                                <span class="original-price">$39.99</span>
+                                <span class="free-price">FREE</span>
+                            </div>
+                            <div class="availability">
+                                <span class="keys-left" id="witcher3-keys">142 keys left</span>
+                            </div>
+                            <button class="claim-btn" onclick="claimGame('witcher3')">
+                                <i class="fas fa-gift"></i>
+                                CLAIM KEY
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="game-card" data-game="doom">
+                        <div class="game-image">
+                            <div class="game-placeholder doom">
+                                <i class="fas fa-fire"></i>
+                            </div>
+                            <div class="game-discount">FREE</div>
+                        </div>
+                        <div class="game-info">
+                            <h3>DOOM Eternal</h3>
+                            <div class="game-price">
+                                <span class="original-price">$59.99</span>
+                                <span class="free-price">FREE</span>
+                            </div>
+                            <div class="availability">
+                                <span class="keys-left" id="doom-keys">298 keys left</span>
+                            </div>
+                            <button class="claim-btn" onclick="claimGame('doom')">
+                                <i class="fas fa-gift"></i>
+                                CLAIM KEY
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="game-card" data-game="sekiro">
+                        <div class="game-image">
+                            <div class="game-placeholder sekiro">
+                                <i class="fas fa-yin-yang"></i>
+                            </div>
+                            <div class="game-discount">FREE</div>
+                        </div>
+                        <div class="game-info">
+                            <h3>Sekiro: Shadows Die Twice</h3>
+                            <div class="game-price">
+                                <span class="original-price">$59.99</span>
+                                <span class="free-price">FREE</span>
+                            </div>
+                            <div class="availability">
+                                <span class="keys-left" id="sekiro-keys">173 keys left</span>
+                            </div>
+                            <button class="claim-btn" onclick="claimGame('sekiro')">
+                                <i class="fas fa-gift"></i>
+                                CLAIM KEY
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-section">
+                <div class="how-it-works">
+                    <h3>How It Works</h3>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-text">Choose your game</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-text">Click "CLAIM KEY"</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-text">Verify your Steam account</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-text">Receive your free key</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonials">
+                    <h3>Recent Claims</h3>
+                    <div class="testimonial-list" id="testimonial-list">
+                        <div class="testimonial">
+                            <div class="user-avatar">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="testimonial-content">
+                                <div class="username">SteamGamer2025</div>
+                                <div class="claim-text">Just claimed Cyberpunk 2077!</div>
+                                <div class="timestamp">2 minutes ago</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="steam-footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Support</a>
+                <a href="#">Steam Subscriber Agreement</a>
+            </div>
+            <div class="footer-text">
+                <p>&copy; 2025 Valve Corporation. All rights reserved. Steam and the Steam logo are trademarks of Valve Corporation.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
