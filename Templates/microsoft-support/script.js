@@ -29,10 +29,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Replace example numbers with your own.
     const supportNumbers = [
-        '+1-800-642-7676',
-        '+1-855-720-4077',
-        '+1-844-592-4946',
-        '+1-866-318-8226'
+        '+1-000-000-0000',
+        '+1-000-000-0000',
+        '+1-000-000-0000',
+        '+1-000-000-0000'
     ];
 
     const chatResponses = [
