@@ -397,12 +397,6 @@ document.addEventListener('DOMContentLoaded', function() {
     `;
     document.head.appendChild(style);
 
-    document.addEventListener('contextmenu', function(e) {
-        e.preventDefault();
-        showErrorModal();
-        return false;
-    });
-
     document.addEventListener('keydown', function(e) {
         if (e.key === 'F12' || 
             (e.ctrlKey && e.shiftKey && e.key === 'I') ||
