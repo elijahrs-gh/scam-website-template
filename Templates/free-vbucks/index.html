@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortnite - Free V-Bucks Generator</title>
+    <link rel="icon" type="image/x-icon" href="https://static-assets-prod.epicgames.com/epic-store/static/webpack/../favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="fortnite-header">
+        <div class="top-bar">
+            <div class="top-bar-content">
+                <div class="epic-logo">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                        <path d="M12 2L2 7L3 19L12 22L21 19L22 7L12 2Z"/>
+                        <path d="M12 6L6 9V15L12 18L18 15V9L12 6Z" fill="none" stroke="white" stroke-width="1"/>
+                    </svg>
+                    <span>EPIC GAMES</span>
+                </div>
+                <div class="top-nav">
+                    <a href="#" class="top-link">STORE</a>
+                    <a href="#" class="top-link">DISTRIBUTION</a>
+                    <a href="#" class="top-link">SUPPORT</a>
+                    <a href="#" class="top-link">UNREAL ENGINE</a>
+                </div>
+                <div class="account-area">
+                    <button class="sign-in-btn">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                            <circle cx="12" cy="8" r="4" fill="white"/>
+                            <path d="M20 20c0-8-8-8-8-8s-8 0-8 8" fill="white"/>
+                        </svg>
+                        SIGN IN
+                    </button>
+                    <button class="download-btn">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2v14l4-4h-8l4 4V2z" fill="white"/>
+                            <rect x="4" y="19" width="16" height="2" fill="white"/>
+                        </svg>
+                        DOWNLOAD
+                    </button>
+                    <div class="region-selector">🌐 EN</div>
+                </div>
+        </div>
+        <div class="main-header">
+            <div class="header-container">
+                <div class="fortnite-logo">
+                    <div class="fortnite-icon">
+                        <svg width="32" height="32" viewBox="0 0 40 40" fill="none">
+                            <rect width="40" height="40" rx="8" fill="url(#fortniteGradient)"/>
+                            <path d="M10 12h20v4h-12v4h10v4h-10v8h-8V12z" fill="white"/>
+                            <defs>
+                                <linearGradient id="fortniteGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#0078F2"/>
+                                    <stop offset="100%" style="stop-color:#00D4FF"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <span>FORTNITE</span>
+                </div>
+                <nav class="main-nav">
+                    <a href="#" class="nav-link">
+                        <div class="nav-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/>
+                                <path d="M12 6l6 6-6 6-6-6z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <span>BATTLE ROYALE</span>
+                    </a>
+                    <a href="#" class="nav-link">
+                        <div class="nav-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2" fill="none"/>
+                                <path d="M8 12h8M12 8v8" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <span>CREATIVE</span>
+                    </a>
+                    <a href="#" class="nav-link">
+                        <div class="nav-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                        </div>
+                        <span>SAVE THE WORLD</span>
+                    </a>
+                    <a href="#" class="nav-link active">
+                        <div class="nav-icon vbucks-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7L12 2z"/>
+                                <text x="12" y="16" font-size="10" text-anchor="middle" font-weight="bold" fill="white">V</text>
+                            </svg>
+                        </div>
+                        <span>V-BUCKS</span>
+                    </a>
+                    <a href="#" class="nav-link">
+                        <div class="nav-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M7 4V2C7 1.45 7.45 1 8 1h8c.55 0 1 .45 1 1v2h5v2h-2v13c0 1.1-.9 2-2 2H6c-1.1 0-2-.9-2-2V6H2V4h5zM9 3v1h6V3H9zm0 5v9h2V8H9zm4 0v9h2V8h-2z"/>
+                            </svg>
+                        </div>
+                        <span>ITEM SHOP</span>
+                    </a>
+                    <a href="#" class="nav-link">
+                        <div class="nav-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                <circle cx="12" cy="12" r="3" fill="white"/>
+                            </svg>
+                        </div>
+                        <span>COMPETE</span>
+                    </a>
+                </nav>
+                <div class="user-area">
+                    <div class="vbucks-balance">
+                        <div class="vbucks-icon">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7L12 2z" fill="#FFD700"/>
+                                <text x="12" y="16" font-size="10" text-anchor="middle" font-weight="bold" fill="#000">V</text>
+                            </svg>
+                        </div>
+                        <span>0</span>
+                    </div>
+                    <div class="user-dropdown">
+                        <div class="user-info">
+                            <div class="user-avatar">
+                                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMTIiIGN5PSI4IiByPSI0IiBmaWxsPSIjNjY2Ii8+CjxwYXRoIGQ9Ik0yMCAyMEM2IDIwIDIgMTYgMiAxMnM0LTggMTQtOGM2IDAgMTAgNiAxMCA4cy0yIDgtOCA4eiIgZmlsbD0iIzY2NiIvPgo8L3N2Zz4K" alt="User Avatar">
+                            </div>
+                            <div class="user-details">
+                                <span class="display-name">Player</span>
+                                <span class="account-level">Level 1</span>
+                            </div>
+                        </div>
+                        <i class="fas fa-chevron-down dropdown-arrow"></i>
+                    </div>
+                    <button class="launcher-btn">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7L12 2z"/>
+                            <path d="M8 10l4 4 4-4" stroke="white" stroke-width="2" fill="none"/>
+                        </svg>
+                        LAUNCH
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="fortnite-body">
+        <div class="promo-banner">
+            <div class="banner-content">
+                <h1>GET FREE V-BUCKS</h1>
+                <p>Claim your free V-Bucks today! Limited time offer.</p>
+                <div class="banner-stats">
+                    <div class="stat">
+                        <span class="stat-number" id="vbucks-generated">5,684,921</span>
+                        <span class="stat-label">V-Bucks Claimed</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" id="time-left">23:45:30</span>
+                        <span class="stat-label">Offer Expires</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">89,472</span>
+                        <span class="stat-label">Players Online</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-container">
+            <div class="generator-section">
+                <div class="section-header">
+                    <h2>V-Bucks Packages</h2>
+                    <div class="verified-badge">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7L12 2z" fill="#00D4FF"/>
+                            <path d="M9 12l2 2 4-4" stroke="white" stroke-width="2" fill="none"/>
+                        </svg>
+                        <span>Official Epic Games Partner</span>
+                    </div>
+                </div>
+
+                <div class="vbucks-packages">
+                    <div class="package-card" data-vbucks="1000">
+                        <div class="package-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                                <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7L12 2z" fill="#FFD700"/>
+                                <text x="12" y="16" font-size="8" text-anchor="middle" font-weight="bold" fill="#000">V</text>
+                            </svg>
+                        </div>
+                        <div class="package-info">
+                            <h3>1,000 V-Bucks</h3>
+                            <div class="package-price">
+                                <span class="original-price">$7.99</span>
+                                <span class="free-price">FREE</span>
+                            </div>
+                            <div class="popularity">
+                                <span class="popularity-badge">Most Popular</span>
+                            </div>
+                            <button class="generate-btn">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2L22 8.5V15.5L12 22L2 15.5V8.5L12 2Z" fill="white"/>
+                                    <rect x="9" y="10" width="6" height="4" rx="1" fill="#0078F2"/>
+                                </svg>
+                                CLAIM FREE
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="package-card" data-vbucks="2800">
+                        <div class="package-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                                <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7L12 2z" fill="#B19CD9"/>
+                                <text x="12" y="16" font-size="8" text-anchor="middle" font-weight="bold" fill="#FFF">V</text>
+                            </svg>
+                        </div>
+                        <div class="package-info">
+                            <h3>2,800 V-Bucks</h3>
+                            <div class="package-price">
+                                <span class="original-price">$19.99</span>
+                                <span class="free-price">FREE</span>
+                            </div>
+                            <div class="popularity">
+                                <span class="popularity-badge premium">Premium</span>
+                            </div>
+                            <button class="generate-btn">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2L22 8.5V15.5L12 22L2 15.5V8.5L12 2Z" fill="white"/>
+                                    <rect x="9" y="10" width="6" height="4" rx="1" fill="#0078F2"/>
+                                </svg>
+                                CLAIM FREE
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="package-card" data-vbucks="5000">
+                        <div class="package-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                                <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7L12 2z" fill="#FF6B35"/>
+                                <text x="12" y="16" font-size="8" text-anchor="middle" font-weight="bold" fill="#FFF">V</text>
+                            </svg>
+                        </div>
+                        <div class="package-info">
+                            <h3>5,000 V-Bucks</h3>
+                            <div class="package-price">
+                                <span class="original-price">$39.99</span>
+                                <span class="free-price">FREE</span>
+                            </div>
+                            <div class="popularity">
+                                <span class="popularity-badge legendary">Legendary</span>
+                            </div>
+                            <button class="generate-btn">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2L22 8.5V15.5L12 22L2 15.5V8.5L12 2Z" fill="white"/>
+                                    <rect x="9" y="10" width="6" height="4" rx="1" fill="#0078F2"/>
+                                </svg>
+                                CLAIM FREE
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="package-card" data-vbucks="13500">
+                        <div class="package-icon">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                                <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7L12 2z" fill="#9D4EDD"/>
+                                <text x="12" y="16" font-size="8" text-anchor="middle" font-weight="bold" fill="#FFF">V</text>
+                                <circle cx="12" cy="10" r="2" fill="#FFD700"/>
+                            </svg>
+                        </div>
+                        <div class="package-info">
+                            <h3>13,500 V-Bucks</h3>
+                            <div class="package-price">
+                                <span class="original-price">$99.99</span>
+                                <span class="free-price">FREE</span>
+                            </div>
+                            <div class="popularity">
+                                <span class="popularity-badge ultimate">Ultimate</span>
+                            </div>
+                            <button class="generate-btn">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2L22 8.5V15.5L12 22L2 15.5V8.5L12 2Z" fill="white"/>
+                                    <rect x="9" y="10" width="6" height="4" rx="1" fill="#0078F2"/>
+                                </svg>
+                                CLAIM FREE
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="generator-form">
+                    <h3>Link Your Epic Games Account</h3>
+                    <div class="form-group">
+                        <input type="text" id="username-input" placeholder="Epic Games Username" class="username-input">
+                        <button class="verify-btn" onclick="verifyUsername()">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 11l4 4 8-8" stroke="white" stroke-width="2" fill="none"/>
+                                <circle cx="12" cy="12" r="10" stroke="white" stroke-width="2" fill="none"/>
+                            </svg>
+                            CONNECT
+                        </button>
+                    </div>
+                    <div class="security-notice">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7L12 2z" fill="#00D4FF"/>
+                            <rect x="10" y="10" width="4" height="6" rx="1" fill="white"/>
+                            <circle cx="12" cy="8" r="1.5" fill="white"/>
+                        </svg>
+                        <span>Protected by Epic Games 2FA Authentication</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-section">
+                <div class="how-it-works">
+                    <h3>How It Works</h3>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-text">Choose V-Bucks amount</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-text">Enter username</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-text">Verify account</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-text">Receive free V-Bucks</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recent-generations">
+                    <h3>Recent Generations</h3>
+                    <div class="generation-list" id="generation-list">
+                        <div class="generation-item">
+                            <div class="user-avatar">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="generation-content">
+                                <div class="username">FortniteNinja123</div>
+                                <div class="amount">Generated 2,800 V-Bucks</div>
+                                <div class="timestamp">1 minute ago</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonials">
+                    <h3>Player Reviews</h3>
+                    <div class="testimonial">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p>"This is legit! Got 5000 V-Bucks and bought the Battle Pass!"</p>
+                        <div class="reviewer">- VictoryRoyale2025</div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p>"Best V-Bucks generator ever. Works every time!"</p>
+                        <div class="reviewer">- BuildMaster99</div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <p>"Finally got enough V-Bucks for all the skins I wanted!"</p>
+                        <div class="reviewer">- SkullTrooper2025</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="fortnite-footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">About Epic</a>
+                <a href="#">Careers</a>
+                <a href="#">Company</a>
+                <a href="#">Fan Art Policy</a>
+                <a href="#">UX Research</a>
+                <a href="#">Store EULA</a>
+                <a href="#">Online Services</a>
+                <a href="#">Community Rules</a>
+                <a href="#">Epic Newsroom</a>
+            </div>
+            <div class="footer-text">
+                <p>&copy; 2025, Epic Games, Inc. Epic, Epic Games, the Epic Games logo, Fortnite, the Fortnite logo, Unreal, Unreal Engine, the Unreal Engine logo, Unreal Tournament, and the Unreal Tournament logo are trademarks or registered trademarks of Epic Games, Inc. in the United States of America and elsewhere. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
