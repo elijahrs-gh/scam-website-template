@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScamShield - Stay Safe Online</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-shield-alt"></i>
+                <span>ScamShield</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link active" data-tab="home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link" data-tab="about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#explore" class="nav-link" data-tab="explore">Explore</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#tips" class="nav-link" data-tab="tips">Safety Tips</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <section id="home" class="tab-content active">
+            <div class="hero">
+                <div class="hero-content">
+                    <h1 class="hero-title">Stay Protected from Online Scams</h1>
+                    <p class="hero-subtitle">Learn to identify and avoid fraudulent websites that could steal your personal information or money.</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" onclick="showTab('explore')">Explore Examples</button>
+                        <button class="btn btn-secondary" onclick="showTab('tips')">Safety Tips</button>
+                    </div>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <h3>2.4M+</h3>
+                        <p>Scam Reports in 2024</p>
+                    </div>
+                    <div class="stat">
+                        <h3>$10.3B</h3>
+                        <p>Lost to Online Fraud in 2024</p>
+                    </div>
+                    <div class="stat">
+                        <h3>156%</h3>
+                        <p>Increase in monetary loss from Phishing from 2023</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="tab-content">
+            <div class="container">
+                <h2 class="section-title">About Online Scams</h2>
+                <div class="about-grid">
+                    <div class="about-card">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <h3>What Are Scam Websites?</h3>
+                        <p>Fraudulent websites designed to steal personal information, money, or login credentials through deceptive practices.</p>
+                    </div>
+                    <div class="about-card">
+                        <i class="fas fa-eye"></i>
+                        <h3>How to Spot Them</h3>
+                        <p>Look for poor design, urgent language, suspicious URLs, missing contact information, and too-good-to-be-true offers.</p>
+                    </div>
+                    <div class="about-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Stay Protected</h3>
+                        <p>Always verify website authenticity, use secure payment methods, and trust your instincts when something feels wrong.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="explore" class="tab-content">
+            <div class="container">
+                <h2 class="section-title">Explore Scam Examples</h2>
+                <p class="section-subtitle">These are safe examples that demonstrate common scam website tactics. Learn to recognize these patterns!</p>
+                
+                <div class="examples-grid">
+                    <div class="example-card" data-url="https://lottery-kappa-eight.vercel.app/">
+                        <div class="example-image">
+                            <img src="https://hc-cdn.hel1.your-objectstorage.com/s/v3/aef408e8bb218532d3fb23e985bb2ce0aa335cce_screenshot_2025-06-21_at_9.43.56___pm.png" alt="Lottery Scam Website" class="screenshot-img">
+                            <div class="example-overlay">
+                                <span class="danger-badge">LOTTERY SCAM</span>
+                            </div>
+                        </div>
+                        <div class="example-content">
+                            <h3>Fake Lottery Winner</h3>
+                            <p>Claims you've won a lottery you never entered, asks for fees upfront.</p>
+                            <div class="warning-signs">
+                                <span class="warning-tag">Unexpected Win</span>
+                                <span class="warning-tag">Upfront Fees</span>
+                                <span class="warning-tag">Urgent Action</span>
+                            </div>
+                            <a href="https://lottery-kappa-eight.vercel.app/" target="_blank" class="example-link">View Example</a>
+                        </div>
+                    </div>
+
+                    <div class="example-card" data-url="https://microsoft-support-blush.vercel.app/">
+                        <div class="example-image">
+                            <img src="https://hc-cdn.hel1.your-objectstorage.com/s/v3/85d385787cb35396760bc9d45729db04cf05e74b_screenshot_2025-06-21_at_9.44.08___pm.png" alt="Microsoft Support Scam" class="screenshot-img">
+                            <div class="example-overlay">
+                                <span class="danger-badge">TECH SCAM</span>
+                            </div>
+                        </div>
+                        <div class="example-content">
+                            <h3>Fake Microsoft Support</h3>
+                            <p>Claims your computer is infected and offers paid "support" services.</p>
+                            <div class="warning-signs">
+                                <span class="warning-tag">Popup Alerts</span>
+                                <span class="warning-tag">Urgent Language</span>
+                                <span class="warning-tag">Phone Numbers</span>
+                            </div>
+                            <a href="https://microsoft-support-blush.vercel.app/" target="_blank" class="example-link">View Example</a>
+                        </div>
+                    </div>
+
+                    <div class="example-card" data-url="https://google-support-two.vercel.app/">
+                        <div class="example-image">
+                            <img src="https://hc-cdn.hel1.your-objectstorage.com/s/v3/9a7b10911250e176d34d5efc561c8905bf564f3d_screenshot_2025-06-21_at_9.44.16___pm.png" alt="Google Support Scam" class="screenshot-img">
+                            <div class="example-overlay">
+                                <span class="danger-badge">TECH SCAM</span>
+                            </div>
+                        </div>
+                        <div class="example-content">
+                            <h3>Fake Google Support</h3>
+                            <p>Pretends to be Google support claiming account security issues.</p>
+                            <div class="warning-signs">
+                                <span class="warning-tag">Urgent Action</span>
+                                <span class="warning-tag">Fake Domain</span>
+                                <span class="warning-tag">Security Scare</span>
+                            </div>
+                            <a href="https://google-support-two.vercel.app/" target="_blank" class="example-link">View Example</a>
+                        </div>
+                    </div>
+
+                    <div class="example-card" data-url="https://steam-keys.vercel.app/">
+                        <div class="example-image">
+                            <img src="https://hc-cdn.hel1.your-objectstorage.com/s/v3/28da14f5675b75e40ba21a9ac45f1753e8b7e097_screenshot_2025-06-21_at_9.44.24___pm.png" alt="Steam Keys Scam" class="screenshot-img">
+                            <div class="example-overlay">
+                                <span class="danger-badge">FAKE STORE</span>
+                            </div>
+                        </div>
+                        <div class="example-content">
+                            <h3>Free Steam Keys</h3>
+                            <p>Offers free game keys in exchange for personal information or surveys.</p>
+                            <div class="warning-signs">
+                                <span class="warning-tag">Too Good</span>
+                                <span class="warning-tag">Personal Info</span>
+                                <span class="warning-tag">Surveys</span>
+                            </div>
+                            <a href="https://steam-keys.vercel.app/" target="_blank" class="example-link">View Example</a>
+                        </div>
+                    </div>
+
+                    <div class="example-card" data-url="https://free-robux-neon.vercel.app/">
+                        <div class="example-image">
+                            <img src="https://hc-cdn.hel1.your-objectstorage.com/s/v3/6050870cc38495a9d319438acd014ab80c6de90f_screenshot_2025-06-21_at_9.44.34___pm.png" alt="Free Robux Scam" class="screenshot-img">
+                            <div class="example-overlay">
+                                <span class="danger-badge">FAKE REWARDS</span>
+                            </div>
+                        </div>
+                        <div class="example-content">
+                            <h3>Free Robux Generator</h3>
+                            <p>Promises free Roblox currency in exchange for account credentials.</p>
+                            <div class="warning-signs">
+                                <span class="warning-tag">Account Risk</span>
+                                <span class="warning-tag">Too Good</span>
+                                <span class="warning-tag">Credential Theft</span>
+                            </div>
+                            <a href="https://free-robux-neon.vercel.app/" target="_blank" class="example-link">View Example</a>
+                        </div>
+                    </div>
+
+                    <div class="example-card" data-url="https://verifygoogle.com/">
+                        <div class="example-image">
+                            <img src="https://hc-cdn.hel1.your-objectstorage.com/s/v3/f2c06dfecf45329576bd9bf0853711007c326d81_screenshot_2025-06-21_at_9.44.40___pm.png" alt="Google Verify Phishing" class="screenshot-img">
+                            <div class="example-overlay">
+                                <span class="danger-badge">PHISHING</span>
+                            </div>
+                        </div>
+                        <div class="example-content">
+                            <h3>Google Verification Scam</h3>
+                            <p>Mimics Google verification process to steal login credentials.</p>
+                            <div class="warning-signs">
+                                <span class="warning-tag">Suspicious URL</span>
+                                <span class="warning-tag">Credential Theft</span>
+                                <span class="warning-tag">Fake Security</span>
+                            </div>
+                            <a href="https://verifygoogle.com/" target="_blank" class="example-link">View Example</a>
+                        </div>
+                    </div>
+
+                    <div class="example-card" data-url="https://free-ns2.vercel.app/">
+                        <div class="example-image">
+                            <img src="https://hc-cdn.hel1.your-objectstorage.com/s/v3/8b96637d386b38fecca6a05620e46ef02077b711_screenshot_2025-06-21_at_9.44.50___pm.png" alt="Free Nintendo Switch Scam" class="screenshot-img">
+                            <div class="example-overlay">
+                                <span class="danger-badge">FAKE REWARDS</span>
+                            </div>
+                        </div>
+                        <div class="example-content">
+                            <h3>Free Nintendo Switch</h3>
+                            <p>Offers free gaming consoles in exchange for completing surveys or personal info.</p>
+                            <div class="warning-signs">
+                                <span class="warning-tag">Too Good</span>
+                                <span class="warning-tag">Personal Info</span>
+                                <span class="warning-tag">Survey Scam</span>
+                            </div>
+                            <a href="https://free-ns2.vercel.app/" target="_blank" class="example-link">View Example</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tips" class="tab-content">
+            <div class="container">
+                <h2 class="section-title">Safety Tips</h2>
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i class="fas fa-link"></i>
+                        </div>
+                        <h3>Check URLs Carefully</h3>
+                        <p>Always verify the website URL. Look for misspellings, extra characters, or suspicious domains. Legitimate sites use HTTPS.</p>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i class="fas fa-user-secret"></i>
+                        </div>
+                        <h3>Protect Personal Information</h3>
+                        <p>Never share sensitive information like SSN, passwords, or credit card details unless you're certain the site is legitimate.</p>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3>Research Before You Buy</h3>
+                        <p>Look up reviews, check company information, and verify contact details before making any purchases online.</p>
+                    </div>
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>Don't Rush Decisions</h3>
+                        <p>Scammers create urgency. Take time to think and verify before acting on limited-time offers or urgent requests.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 ScamShield. Educational purposes only. Stay safe online!</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
