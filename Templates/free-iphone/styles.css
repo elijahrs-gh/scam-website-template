@@ -1,0 +1,823 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+body {
+    font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.47059;
+    color: #1d1d1f;
+    background-color: #fff;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.header {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.nav {
+    padding: 0 max(22px, env(safe-area-inset-left));
+}
+
+.nav-container {
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 48px;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+}
+
+.apple-logo {
+    width: 16px;
+    height: 20px;
+    fill: #1d1d1f;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-link {
+    color: #1d1d1f;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    transition: opacity 0.3s ease;
+}
+
+.nav-link:hover {
+    opacity: 0.8;
+}
+
+.main {
+    margin-top: 48px;
+    position: relative;
+}
+
+.hero {
+    padding: 52px 0 104px;
+    background: rgb(255, 255, 255);
+    color: #1d1d1f;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 0;
+}
+
+.hero-content {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-text {
+    text-align: center;
+    max-width: 734px;
+}
+
+.hero-title {
+    font-size: 80px;
+    font-weight: 600;
+    line-height: 1.05;
+    margin-bottom: 6px;
+    letter-spacing: -0.015em;
+    font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.hero-subtitle {
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 1.08333;
+    margin-bottom: 19px;
+    color: #06c;
+    letter-spacing: -0.003em;
+}
+
+.hero-description {
+    font-size: 28px;
+    line-height: 1.14286;
+    font-weight: 400;
+    margin-bottom: 36px;
+    color: #86868b;
+    letter-spacing: 0.007em;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 52px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 980px;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 400;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+    min-width: 28px;
+    letter-spacing: -0.022em;
+    font-family: "SF Pro Text", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.btn-primary {
+    background-color: #0071e3;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #0077ed;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #0071e3;
+    border: 1px solid #0071e3;
+}
+
+.btn-secondary:hover {
+    background-color: #0071e3;
+    color: #fff;
+}
+
+.btn-large {
+    padding: 16px 32px;
+    font-size: 19px;
+}
+
+.btn-full {
+    width: 100%;
+}
+
+.hero-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    gap: 24px;
+}
+
+.phone-selector {
+    display: none;
+}
+
+.color-options {
+    display: none;
+}
+
+.color-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    cursor: default;
+    transition: none;
+    position: relative;
+    pointer-events: none;
+}
+
+.color-btn.active {
+    border-color: #0071e3;
+    transform: scale(1.1);
+}
+
+.color-btn.active::after {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 113, 227, 0.8);
+}
+
+.phone-container {
+    position: relative;
+}
+
+.iphone-image {
+    position: relative;
+    width: 400px;
+    height: 600px;
+    background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthink-ecuador.com%2Fwp-content%2Fuploads%2F2024%2F09%2FiPhone-16-Teal-1.png&f=1&nofb=1&ipt=0fda5abacc11f2768527209d230c6751b5ae7ee2bfd5e4c2915dbb495f43c6ac');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.iphone-image img {
+    display: none;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Remove old phone styles - no longer needed */
+.phone,
+.phone.ultramarine,
+.phone.teal,
+.phone.pink,
+.phone.white,
+.phone.black,
+.phone-screen {
+    display: none;
+}
+
+/* Old phone mockup styles - removed since using real iPhone image */
+
+.features {
+    padding: 100px 22px;
+    background-color: #f5f5f7;
+    position: relative;
+    z-index: 2;
+}
+
+.features-container {
+    max-width: 1024px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 56px;
+    font-weight: 600;
+    line-height: 1.07143;
+    margin-bottom: 20px;
+    color: #1d1d1f;
+    letter-spacing: -0.005em;
+    font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    margin-top: 80px;
+}
+
+.feature-card {
+    background: #fff;
+    padding: 48px 40px;
+    border-radius: 18px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.feature-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.feature-icon {
+    font-size: 56px;
+    margin-bottom: 24px;
+    display: block;
+}
+
+.feature-card h3 {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.125;
+    margin-bottom: 12px;
+    color: #1d1d1f;
+    letter-spacing: 0.004em;
+    font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.feature-card p {
+    font-size: 21px;
+    line-height: 1.381;
+    color: #86868b;
+    font-weight: 400;
+    letter-spacing: 0.011em;
+}
+
+.countdown {
+    padding: 100px 22px;
+    background: #000;
+    color: #f5f5f7;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.countdown-container {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.countdown-title {
+    font-size: 56px;
+    font-weight: 600;
+    line-height: 1.07143;
+    margin-bottom: 6px;
+    letter-spacing: -0.005em;
+    font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.countdown-subtitle {
+    font-size: 28px;
+    line-height: 1.14286;
+    margin-bottom: 48px;
+    color: #a1a1a6;
+    font-weight: 400;
+    letter-spacing: 0.007em;
+}
+
+.countdown-timer {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin: 60px 0 80px;
+}
+
+.timer-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timer-number {
+    font-size: 64px;
+    font-weight: 600;
+    color: #0071e3;
+    display: block;
+    margin-bottom: 8px;
+    line-height: 1;
+    font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.timer-label {
+    font-size: 17px;
+    color: #a1a1a6;
+    font-weight: 400;
+    letter-spacing: -0.022em;
+}
+
+.availability-notice {
+    margin: 20px 0;
+}
+
+.availability-notice p {
+    font-size: 14px;
+    color: #86868b;
+    font-weight: 400;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 24px;
+    width: 90%;
+    max-width: 480px;
+    position: relative;
+    max-height: 85vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    margin: 0;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.modal-content::-webkit-scrollbar {
+    display: none;
+}
+
+.close {
+    color: #86868b;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.close:hover {
+    color: #1d1d1f;
+}
+
+.modal-content h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #1d1d1f;
+}
+
+.modal-content p {
+    font-size: 16px;
+    color: #86868b;
+    margin-bottom: 24px;
+    line-height: 1.4;
+}
+
+.claim-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 400;
+    color: #1d1d1f;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 10px 14px;
+    border: 1px solid #d2d2d7;
+    border-radius: 12px;
+    font-size: 15px;
+    font-family: inherit;
+    background-color: #fbfbfd;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #0071e3;
+}
+
+.form-group select {
+    padding: 10px 14px;
+    border: 1px solid #d2d2d7;
+    border-radius: 12px;
+    font-size: 15px;
+    font-family: inherit;
+    background-color: #fbfbfd;
+    transition: border-color 0.3s ease;
+    appearance: none;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6,9 12,15 18,9"></polyline></svg>');
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+    padding-right: 40px;
+}
+
+.form-group select:focus {
+    outline: none;
+    border-color: #0071e3;
+}
+
+.checkbox-group {
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+}
+
+.checkbox-group label {
+    font-size: 14px;
+    margin: 0;
+}
+
+.success-modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    align-items: center;
+    justify-content: center;
+}
+
+.success-modal .modal-content {
+    text-align: center;
+    padding: 50px 30px;
+}
+
+.success-icon {
+    font-size: 64px;
+    margin-bottom: 20px;
+}
+
+.footer {
+    background-color: #f5f5f7;
+    padding: 40px 20px;
+    border-top: 1px solid #d2d2d7;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: #515154;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.footer-links a:hover {
+    color: #1d1d1f;
+}
+
+.footer-text {
+    font-size: 12px;
+    color: #86868b;
+}
+
+.specs {
+    padding: 100px 22px;
+    background-color: #fff;
+    position: relative;
+    z-index: 2;
+}
+
+.specs-container {
+    max-width: 1024px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.specs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 60px;
+    margin-top: 80px;
+    text-align: left;
+}
+
+.spec-group h3 {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.14286;
+    margin-bottom: 24px;
+    color: #1d1d1f;
+    font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.spec-group ul {
+    list-style: none;
+    padding: 0;
+}
+
+.spec-group li {
+    font-size: 17px;
+    line-height: 1.47059;
+    color: #1d1d1f;
+    margin-bottom: 12px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.spec-group li::before {
+    content: '•';
+    color: #86868b;
+    position: absolute;
+    left: 0;
+}
+
+@media (max-width: 1068px) {
+    .nav-container {
+        padding: 0 22px;
+    }
+    
+    .hero-title {
+        font-size: 64px;
+    }
+    
+    .hero-subtitle {
+        font-size: 40px;
+    }
+    
+    .hero-description {
+        font-size: 24px;
+    }
+    
+    .section-title {
+        font-size: 48px;
+    }
+    
+    .countdown-title {
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 734px) {
+    .hero {
+        padding: 43px 0 94px;
+    }
+    
+    .hero-content {
+        padding: 0 16px;
+    }
+    
+    .hero-title {
+        font-size: 48px;
+        line-height: 1.04167;
+        margin-bottom: 0;
+    }
+    
+    .hero-subtitle {
+        font-size: 32px;
+        line-height: 1.125;
+        margin-bottom: 11px;
+    }
+    
+    .hero-description {
+        font-size: 19px;
+        line-height: 1.4211;
+        margin-bottom: 31px;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 43px;
+    }
+    
+    .btn {
+        min-width: 200px;
+        padding: 12px 16px;
+    }
+    
+    .iphone-image {
+        width: 300px;
+        height: 450px;
+    }
+    
+    .section-title {
+        font-size: 32px;
+        line-height: 1.125;
+    }
+    
+    .countdown-title {
+        font-size: 32px;
+        line-height: 1.125;
+    }
+    
+    .countdown-subtitle {
+        font-size: 19px;
+        line-height: 1.4211;
+    }
+    
+    .countdown-timer {
+        gap: 40px;
+    }
+    
+    .timer-number {
+        font-size: 48px;
+    }
+    
+    .nav-menu {
+        display: none;
+    }
+    
+    .modal-content {
+        margin: 10% auto;
+        padding: 30px 20px;
+        width: 95%;
+    }
+    
+    .features {
+        padding: 80px 16px;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-top: 60px;
+    }
+    
+    .feature-card {
+        padding: 40px 30px;
+    }
+    
+    .feature-card h3 {
+        font-size: 28px;
+    }
+    
+    .feature-card p {
+        font-size: 19px;
+    }
+    
+    .countdown {
+        padding: 80px 16px;
+    }
+    
+    .specs {
+        padding: 80px 16px;
+    }
+    
+    .specs-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        margin-top: 60px;
+    }
+    
+    .spec-group h3 {
+        font-size: 24px;
+    }
+    
+    .color-options {
+        gap: 8px;
+    }
+    
+    .color-btn {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 40px;
+    }
+    
+    .hero-subtitle {
+        font-size: 28px;
+    }
+    
+    .countdown-timer {
+        gap: 30px;
+    }
+    
+    .timer-number {
+        font-size: 40px;
+    }
+    
+    .iphone-image {
+        width: 250px;
+        height: 375px;
+    }
+}
